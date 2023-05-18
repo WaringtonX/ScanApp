@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/main_appbarss"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:fontFamily="sans-serif-light"
+        android:background="@color/purple_700"
+        android:theme="@style/ToolBarStyle"
+        app:titleTextAppearance="@style/ToolBarStyle.TitleText"
+        app:titleTextColor="#ffffff"
+        android:elevation="16dp"
+        app:layout_scrollFlags="scroll|enterAlways" >
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/purple_500"
+        android:weightSum="1"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/txtbarcode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColorHint="#d3d3d3"
+            android:textSize="16sp"
+            android:paddingTop="5dp"
+            android:hint="barcode">
+
+        </EditText>
+
+        <Button
+            android:id="@+id/btnscanadd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="Scan">
+        </Button>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <ListView
+            android:id="@+id/barcodelistview"
+            android:layout_width="match_parent"
+            android:layout_height="600dp">
+        </ListView>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</LinearLayout>
